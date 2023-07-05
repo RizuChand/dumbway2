@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&family=Roboto:ital,wght@0,300;0,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+    background-color: #F4F3F3;
+    padding: 10px;
+    
+}
+
+nav img {
+    height: 50px; 
+    margin-left: 50px;  
+}
+
+nav ul {
+    display: flex;
+    flex: 1;
+}
+
+nav ul .home {
+    color: black;
+    text-decoration: none;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 10px;
+     
+}
+
+nav ul li:first-child {
+    font-weight: bold;
+}
+
+nav ul li:hover {
+    font-size: large;
+    background-color: #e6dddc;
+    cursor: pointer;
+}
+
+nav .contact-btn {
+    padding: 8px;
+   
+    border-radius: 7px;
+    color: aliceblue;
+    background-color: black;
+    margin: auto;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #DCE0E4;
+    
+}
+.wrapper {
+    height: 70%;
+    font-weight: bold;
+}
+
+.wrapper h1 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+}
+
+
+label {
+    margin: 10px;
+}
+
+input {
+    border-radius: 10px;
+    border-style: none;
+    width: 400px;
+    padding: 10px;
+}
+select {
+    height: 30px;
+    border-radius: 10px;
+    border-style: none;
+}
+
+textarea {
+    border-radius: 10px;
+    border-style: none;
+}
+form button {
+    padding: 10px;
+    width: 100px;
+    margin: 20px;
+    background-color: black;
+    color: #e6dddc;
+    border-radius: 30px;
+    margin-left: auto;
+}
