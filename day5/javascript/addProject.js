@@ -14,26 +14,37 @@ form.addEventListener("submit", (e)=>{
     e.preventDefault();
 
     
+    
+
     const valueProjectName = projectName.value;
     const valueStardate = startDate.value;
     const valueEndDate = endDate.value;
     const valueDescription = description.value;
     let files = file.files;
-   
-   files = URL.createObjectURL(files[0]);
-
-   const iconNodeJS = '<img src="./img/myProject/node-js.svg" alt="nodejs">';
-   const iconNextJS = '<img src="./img/myProject/nextjs.png" alt="nextjs">';
-   const iconReactJS = '<img src="./img/myProject/react.svg" alt="reactjs">';
-   const icontTypescript = '<img src="./img/myProject/typescript.png" alt="typescript">';
-
-   
-   // pengambilan data dari checkbox
-   let checkNodeJS = document.querySelector("#nodejs").checked ? iconNodeJS : "";
-   let checkNextJS = document.querySelector("#nextjs").checked ? iconNextJS : "";
-   let checkReactJS = document.querySelector("#reactjs").checked ? iconReactJS : "";
-   let checkTypescript = document.querySelector("#typescript").checked ? icontTypescript : "";
     
+       const iconNodeJS = '<img src="./img/myProject/node-js.svg" alt="nodejs">';
+       const iconNextJS = '<img src="./img/myProject/nextjs.png" alt="nextjs">';
+       const iconReactJS = '<img src="./img/myProject/react.svg" alt="reactjs">';
+       const icontTypescript = '<img src="./img/myProject/typescript.png" alt="typescript">';
+    
+       // pengambilan data dari checkbox
+       let checkNodeJS = document.querySelector("#nodejs").checked ? iconNodeJS : "";
+       let checkNextJS = document.querySelector("#nextjs").checked ? iconNextJS : "";
+       let checkReactJS = document.querySelector("#reactjs").checked ? iconReactJS : "";
+       let checkTypescript = document.querySelector("#typescript").checked ? icontTypescript : "";
+   
+    
+    if (files[0] === undefined) {
+        alert("Image insert !!");
+    }
+
+    files = URL.createObjectURL(files[0]);
+
+
+
+   
+    
+   
     
     let schema = {
         valueProjectName,
