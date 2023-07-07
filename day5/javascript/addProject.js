@@ -21,6 +21,7 @@ form.addEventListener("submit", (e)=>{
     const valueEndDate = endDate.value;
     const valueDescription = description.value;
     let files = file.files;
+    let duration = document.innerHTML = `<p>${convertDate(valueEndDate,valueStardate)}</p>`;
     
        const iconNodeJS = '<img src="./img/myProject/node-js.svg" alt="nodejs">';
        const iconNextJS = '<img src="./img/myProject/nextjs.png" alt="nextjs">';
@@ -39,12 +40,6 @@ form.addEventListener("submit", (e)=>{
     }
 
     files = URL.createObjectURL(files[0]);
-
-
-
-   
-    
-   
     
     let schema = {
         valueProjectName,
@@ -52,46 +47,65 @@ form.addEventListener("submit", (e)=>{
         valueEndDate,
         valueDescription,
         files,
+        checkNodeJS,
+        checkNextJS,
+        checkReactJS,
+        checkTypescript,
+        duration
+
     }
-    
-    
-    
-    let parent = document.querySelector("#wrapper-myproject");
-    let h1 = document.createElement("li");
-    
- 
-    h1.innerHTML = `<div class="item-card">
-    <img src="${files}" alt="">
-    <div class="text">
-        <h3>${valueProjectName}</h3>
-        <p>${valueDescription}</p>
-    </div>
-    <div class="wrapper-checkbox">
-        <div class="checkbox-item">
-        ${checkNodeJS}
-        ${checkNextJS}
-        ${checkReactJS}
-        ${checkTypescript}
-        </div>
-    </div>
-    <div class="option">
-        <button>Edit</button>
-        <button>Delete</button>
-    </div>
 
-    <a class="detail-project" href="./detailProject.html">detail project</a>
-    <p class="time-left">${convertDate(valueEndDate,valueStardate)}</p>
- </div>`
- 
 
-    parent.append(h1);
-
-   console.log(schema);
+    blogData.push(schema);
     
-   
+    renderBlog();
+    
+    
+
+   console.log(duration);
+    
+
     
    
 })
+
+function renderBlog() {
+
+        let parent = document.querySelector("#wrapper-myproject");
+        let h1 = document.createElement("li");
+        
+        for (let x = 0; x < blogData.length; x++) {
+            
+            h1.innerHTML = `<div class="item-card">
+            <img src="${blogData[x].files}" alt="">
+            <div class="text">
+                <h3>${blogData[x].valueProjectName}</h3>
+                <p>${blogData[x].valueDescription}</p>
+            </div>
+            <div class="wrapper-checkbox">
+                <div class="checkbox-item">
+                ${blogData[x].checkNodeJS}
+                ${blogData[x].checkNextJS}
+                ${blogData[x].checkReactJS}
+                ${blogData[x].checkTypescript}
+                </div>
+            </div>
+            <div class="option">
+                <button>Edit</button>
+                <button>Delete</button>
+            </div>
+        
+            <a class="detail-project" href="./detailProject.html">detail project</a>
+            <p class="duration">${blogData[x].duration}</p>
+         </div>`
+         
+        
+            parent.append(h1);
+            
+            
+        }
+     
+    }
 
 
 function convertDate(EndTime,StartTime) {
@@ -124,3 +138,4 @@ function convertDate(EndTime,StartTime) {
     
 
 }
+
