@@ -8,12 +8,13 @@ const file = document.querySelector("#input-blog-image");
 const form = document.querySelector("#form");
 
 
+
 let blogData = [];
+
 
 form.addEventListener("submit", (e)=>{
     e.preventDefault();
 
-    
     
 
     const valueProjectName = projectName.value;
@@ -60,7 +61,7 @@ form.addEventListener("submit", (e)=>{
     
     renderBlog();
     
-    
+    clearForm();
 
    console.log(duration);
     
@@ -73,6 +74,7 @@ function renderBlog() {
 
         let parent = document.querySelector("#wrapper-myproject");
         let h1 = document.createElement("li");
+        
         
         for (let x = 0; x < blogData.length; x++) {
             
@@ -107,6 +109,17 @@ function renderBlog() {
      
     }
 
+    function clearForm() {
+        projectName.value = ""
+        startDate.value = ""
+        endDate.value = ""
+        description.value = ""
+        file.value = ""
+        // checkNextJS.value = !checked;
+     //    checkNodeJS.value = ""
+     //    checkReactJS.value = ""
+     //    checkTypescript.value = ""
+     }
 
 function convertDate(EndTime,StartTime) {
     const timeEnd = new Date(EndTime).getTime();
