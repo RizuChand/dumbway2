@@ -70,6 +70,7 @@ form.addEventListener("submit", (e)=>{
    
 })
 
+
 function renderBlog() {
 
         let parent = document.querySelector("#wrapper-myproject");
@@ -79,7 +80,9 @@ function renderBlog() {
         for (let x = 0; x < blogData.length; x++) {
             
             h1.innerHTML = `<div class="item-card">
-            <img src="${blogData[x].files}" alt="">
+            <div class="fix-image">
+                <img src="${blogData[x].files}" alt="">
+            </div>
             <div class="text">
                 <h3>${blogData[x].valueProjectName}</h3>
                 <p>${blogData[x].valueDescription}</p>
@@ -96,9 +99,10 @@ function renderBlog() {
                 <button>Edit</button>
                 <button>Delete</button>
             </div>
-        
-            <a class="detail-project" href="./detailProject.html">detail project</a>
-            <p class="duration">${blogData[x].duration}</p>
+            <div class="container-duration">
+                <a class="detail-project" href="./detailProject.html">detail project =>=></a>
+                <span class="duration">${blogData[x].duration}</span>    
+            </div>
          </div>`
          
         
@@ -109,7 +113,8 @@ function renderBlog() {
      
     }
 
-    function clearForm() {
+
+function clearForm() {
         projectName.value = ""
         startDate.value = ""
         endDate.value = ""
@@ -120,6 +125,7 @@ function renderBlog() {
      //    checkReactJS.value = ""
      //    checkTypescript.value = ""
      }
+
 
 function convertDate(EndTime,StartTime) {
     const timeEnd = new Date(EndTime).getTime();
