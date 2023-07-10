@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&family=Roboto:ital,wght@0,300;0,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: lightgray
+}
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+    background-color: white;
+    padding: 10px;
+    
+}
+
+nav img {
+    height: 50px; 
+    margin-left: 50px;  
+}
+
+nav ul {
+    display: flex;
+    flex: 1;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 10px;
+    color: black;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+
+nav ul li:first-child {
+    font-weight: bold;
+}
+
+nav ul li:hover {
+    font-size: large;
+    background-color: #e6dddc;
+    cursor: pointer;
+}
+
+nav .btn-contact {
+    padding: 8px;
+   
+    border-radius: 7px;
+    color: aliceblue;
+    background-color: black;
+    margin: auto;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.wrapper-form {
+    position: relative;
+    margin: 50px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapper-form h1 {
+    margin: 20px;
+}
+
+form {
+
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    
+}
+
+label {
+    margin: 10px;
+}
+
+input {
+    box-sizing: border-box;
+    border-radius: 10px;
+    border-style: none;
+    height: 40px;
+    margin: 10px;
+  
+}
+
+.wrapper-date {
+    display: flex;
+}
+
+.date-form1 {
+    flex: 1;    
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.date-form2 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+
+}
+textarea {
+    border-radius: 10px;
+}
+.radio-button {
+    display: flex;
+    align-items: center;
+}
+
+.upload-images {
+    border-radius: 10px;
+    display: flex;
+    background-color: rgb(245, 253, 251);
+    margin-bottom: 20px;
+    margin-top: 10px;
+
+}
+.upload-images label {
+    margin: 0;
+}
+.upload-images label p {
+    background-color: rgb(178, 204, 212);
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.btn-submit {
+    padding: 10px;
+    background-color: black;
+    color: white;
+     border-radius: 10px;
+      border-style: none;
+      cursor: pointer;
+}
+
