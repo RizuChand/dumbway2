@@ -13,35 +13,29 @@ body {
 nav {
     display: flex;
     justify-content: flex-start;
-    background-color: white;
+    background-color: #F4F3F3;
     padding: 10px;
     
 }
 
 nav img {
-    height: 50px; 
+    height: 3rem; 
     margin-left: 50px;  
 }
 
-nav ul {
+.nav-menu {
     display: flex;
-    flex: 1;
+}
+
+.btnContactBurger{
+    display: none;
 }
 
 nav ul li {
     display: flex;
     align-items: center;
-    list-style: none;
-    margin: 10px;
-    color: black;
+    list-style: none; 
 }
-
-nav ul li a {
-    text-decoration: none;
-    color: black;
-}
-
-
 nav ul li:first-child {
     font-weight: bold;
 }
@@ -51,7 +45,10 @@ nav ul li:hover {
     background-color: #e6dddc;
     cursor: pointer;
 }
-
+nav ul li a {
+    
+    color: black;  
+}
 nav .btn-contact {
     padding: 8px;
    
@@ -60,6 +57,24 @@ nav .btn-contact {
     background-color: black;
     margin: auto;
     margin-right: 20px;
+}
+.hamburgerMenu {
+    display: none;
+    cursor: pointer;
+}
+
+#hamburgerMenu-item {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: black;
+    
+}
+a{
+    margin: 20px;
     text-decoration: none;
 }
 
@@ -70,7 +85,6 @@ nav .btn-contact {
 }
 
 .wrapper-form {
-    position: relative;
     margin: 50px;
     width: 50%;
     display: flex;
@@ -95,7 +109,6 @@ label {
 }
 
 input {
-    box-sizing: border-box;
     border-radius: 10px;
     border-style: none;
     height: 40px;

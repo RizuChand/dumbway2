@@ -62,7 +62,7 @@ nav .btn-contact {
 #hamburgerMenu-item {
     display: block;
     width: 25px;
-    height: 4px;
+    height: 3px;
     margin: 5px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
@@ -185,7 +185,6 @@ svg {
     /*
     navbar responsive
     */
-
 nav {
     align-items: center;
     justify-content: space-between;
@@ -221,11 +220,13 @@ nav img {
     top: 70px;
     flex-direction: column;
     transition: 0.3s;
-    text-align: center;
-    background-color: azure;
+    background-color: #F4F3F3;
+    
 }
 
-nav ul.active {
+
+.nav-menu.active {
+    width: 100%;
     left: 0;
 }
 
@@ -252,8 +253,8 @@ nav ul.active {
     display: flex;
     justify-content: flex-start;
     gap: 0px;
-    margin-left: 0px;
-    margin-right: 10px;
+    margin-left: -20px;
+    
 }
   
 }
